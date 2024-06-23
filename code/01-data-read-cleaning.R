@@ -26,5 +26,8 @@ access_token <- get_spotify_access_token() #get Spotify token
 #artist's audio features
 df <- get_artist_audio_features('Billie Holiday', include_groups = "compilation") #looking only at compilations
 
+#filter data for the compilation album of interest - Lady Day: The Complete Billie Holiday On Columbia (1933-1944)
+df <- filter(df, df$album_name == 'Lady Day: The Complete Billie Holiday On Columbia (1933-1944)')
+
 #only keep variables of interest
 #df_fo <- df[, c(9:19, 22, 26:27, 30, 32, 36:38)]

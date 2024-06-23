@@ -1,0 +1,30 @@
+
+#### Libraries ####
+
+#spotifyr is a Spotify wrapper for R
+#dplyr - data manipulation
+pacman::p_load(spotifyr, tidyverse) #load all libraries with pacman
+
+
+#### Spotify Credentials ####
+
+#import Spotify Client ID and Secret using the following code
+
+# myclientid <- 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+# myclientsecret <- 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+
+Sys.setenv(SPOTIFY_CLIENT_ID = myclientid)
+Sys.setenv(SPOTIFY_CLIENT_SECRET = myclientsecret)
+
+access_token <- get_spotify_access_token() #get Spotify token
+
+
+#### Load the Data ####
+
+#Billie Holiday Spotify ID (last part of the URL of artist's profile): 1YzCsTRb22dQkh9lghPIrp
+
+#artist's audio features
+df <- get_artist_audio_features('Billie Holiday', include_groups = "compilation") #looking only at compilations
+
+#only keep variables of interest
+#df_fo <- df[, c(9:19, 22, 26:27, 30, 32, 36:38)]

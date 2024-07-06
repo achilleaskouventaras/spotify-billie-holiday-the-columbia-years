@@ -30,7 +30,7 @@ df <- get_artist_audio_features('Billie Holiday', include_groups = "compilation"
 df <- filter(df, df$album_name == 'Lady Day: The Complete Billie Holiday On Columbia (1933-1944)')
 
 #only keep variables of interest
-af <- df[, c(9:19, 22, 26:27, 30, 32, 36:39)]
+af <- df[, c(9:19, 22, 26, 30, 32, 36:39)]
 write.csv(af, "data/af.csv", row.names = FALSE) #write audio features for this compilation in a .csv file
 
 #### Also consider elaborating on the following ####

@@ -30,4 +30,10 @@ df <- get_artist_audio_features('Billie Holiday', include_groups = "compilation"
 df <- filter(df, df$album_name == 'Lady Day: The Complete Billie Holiday On Columbia (1933-1944)')
 
 #only keep variables of interest
-#df_fo <- df[, c(9:19, 22, 26:27, 30, 32, 36:38)]
+af <- df[, c(9:19, 22, 26:27, 30, 32, 37:39)]
+
+
+#### Also consider elaborating on the following ####
+
+#look at a specific track
+#track <- get_track_audio_analysis('3CagY2CVUPn1gGAI9JC0jx', authorization = get_spotify_access_token())

@@ -25,6 +25,7 @@ ggpairs(af[, -c(3, 5, 12, 14:19)], ggplot2::aes(colour = factor(af$mode_name))) 
 #outlier <- identify(cbind(train$Nscore, train$Cscore))
 #probably do this with box plots 
 #check: https://stackoverflow.com/questions/33524669/labeling-outliers-of-boxplots-in-r
+#useful link: https://help.spotontrack.com/article/what-do-the-audio-features-mean
 
 #looking into correlations
 m <- cor(af[, -c(3, 5, 12, 14:19)]);corrplot(m, method = "number", type = "upper", diag = F) #calculate correlation matrix and plot correlogram

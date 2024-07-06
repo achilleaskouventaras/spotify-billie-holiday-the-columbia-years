@@ -26,6 +26,7 @@ ggpairs(af[, -c(3, 5, 12, 14:19)], ggplot2::aes(colour = factor(af$mode_name))) 
 #probably do this with box plots 
 #check: https://stackoverflow.com/questions/33524669/labeling-outliers-of-boxplots-in-r
 #useful link: https://help.spotontrack.com/article/what-do-the-audio-features-mean
+#useful link on emotional valence: https://web.archive.org/web/20170422195736/http://blog.echonest.com/post/66097438564/plotting-musics-emotional-valence-1950-2013
 
 #looking into correlations
 m <- cor(af[, -c(3, 5, 12, 14:19)]);corrplot(m, method = "number", type = "upper", diag = F) #calculate correlation matrix and plot correlogram

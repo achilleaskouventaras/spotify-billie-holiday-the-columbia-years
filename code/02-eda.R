@@ -1,7 +1,7 @@
 #load libraries using pacman
 #install.packages("pacman")
-devtools::install_github('mikldk/pichor')
-pacman::p_load(tidyverse, skimr, corrplot, ggplot2, GGally, knitr, pichor)
+#devtools::install_github('mikldk/pichor')
+pacman::p_load(tidyverse, skimr, corrplot, ggplot2, GGally, knitr)
 
 billie <- read.csv("data/af.csv") #read audio features data
 
